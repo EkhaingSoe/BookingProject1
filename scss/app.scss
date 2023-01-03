@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+
+// font-family: 'DM Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+//font
+$font-family-sans-serif: 'DM Sans';
+$display-font-family:'Poppins';
+
+// $theme-colors:(
+//     "primary":    $primary,
+//   "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark,
+//     "eks":orange,
+// );
+$theme-colors:(
+    "primary":#5143D9,
+    "danger":#DA8496,
+    "eks":orange,
+    "success":    #0CBC87,
+    "info":      #17A2B8,
+    "warning":    #F7C32E,
+    "secondary" :rgba(224, 228, 237, 0.907),
+    
+    "dark":       black,
+    "pro":#E6F8F3,
+    "snow":#FBE9EB,
+    "light":#F5F5F6,
+    "footer":#c8c8c8,
+    
+    // "select":rgba(232, 235, 241, 0.907),
+);
+
+$primary:#5143D9;
+
+$eks:orange;
+$pro:#E6F8F3;
+$footer:#c8c8c8;
+
+
+
+//button
+$btn-padding-x-sm:.7rem;
+$btn-padding-y-sm:.4rem;
+$btn-border-radius-sm:.5rem;
+$btn-padding-x-lg:1.7rem;
+$btn-padding-y-lg:.7rem;
+$btn-font-size-lg:1rem;
+
+
+
+//
+$form-select-color: gray;
+// $form-select-focus-border-color: #5143D9;
+$form-select-border-color: #5143D9;
+// $form-select-line-height: 2rem;
+
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+//css customize
+
+
+.first-btn:hover{
+        background-color:#5143D9 !important; 
+        color: white;
+}
+li a{
+    text-decoration: none;
+    color:black;
+}
+
+.image-container{
+    position: relative;
+}
+.circle{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    width: 45px;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+}
+
+
+

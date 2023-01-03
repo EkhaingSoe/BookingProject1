@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body{
+        height: 3000px;
+      }
+      /* .hero1{
+        position: relative;
+        z-index: 1;
+      }
+      .inner-text{
+        position: absolute;
+        bottom: 0;
+      } */
+     .box {
+  --mask: 
+    radial-gradient(3px at 0    75%,#0000 98%,#000) 3px 50%/51% 12px repeat-y,
+    radial-gradient(3px at 50%  25%,#000 99%,#0000 101%) left/6px 12px repeat-y,
+    radial-gradient(3px at 100% 25%,#0000 98%,#000) calc(100% - 3px) 50%/51% 12px repeat-y,
+    radial-gradient(3px at 50%  75%,#000 99%,#0000 101%) right/6px 12px repeat-y;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+}
+      .ticket-container{
+        position: relative;
+        z-index: 2;
+      }
+      
+      .ticket-find{
+        position: absolute;
+        z-index: 3;
+        bottom: -30px;
+        right: 80px;
+        
+      }
+      .plane{
+        background-image: url(./img/pexels-brett-sayles-1059608.jpg);
+        background-position: center center;
+    
+        background-repeat: no repeat;
+        background-size: cover;
+      }
+      .arrow{
+        width: 55px;
+        height: 55px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        line-height: 55px;
+        border-radius: 50%;
+      }
+    </style>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container  ">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo.svg" style="width:100px;" alt="">
+          </a>
+           
+          <div class="d-flex align-items-center ms-auto">
+             <div>
+               <div data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <i class="bi bi-list fs-2"></i>
+              </div>
+             
+             </div>
+              <i class="bi bi-search fs-4 ms-3 me-4 text-muted"></i>
+              <div class="d-none d-sm-block">
+                <button class="btn btn-outline-primary border-0 bg-secondary btn-sm first-btn fw-bold" style="letter-spacing: 1px;"  >
+                <i class="bi bi-box-arrow-in-right me-1" ></i>
+                Sign Up
+              </button>
+             
+          </div>
+        </div>
+      </nav> 
+        <div class="collapse shadow-lg" id="collapseExample">
+                 <ul class="list-group  ">
+                  <li class="list-group-item p-4 dropdown">
+                    <a href="" class="btn  dropdown-toggle d-flex justify-content-between align-items-center border-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div>
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        Travelers
+                      </div>
+                    </a>
+                     <ul class="dropdown-menu mt-2 p-3 " style="width: 1060px;">
+                      <li class="my-2 ">
+                        <a class="dropdown-item d-flex" href="#">
+                          <button class="btn btn-secondary me-2">
+                            <i class="fa-solid fa-hotel text-primary"></i>
+                          </button>
+                          <div>
+                            <h6 class="m-0 fw-bolder">Hotels</h6>
+                            <small class="text-muted">Small description here</small>
+                      
+                          </div>
+                        </a>
+                      </li>
+                      <li class="my-2">
+                        <a class="dropdown-item d-flex" href="#">
+                          <button class="btn btn-secondary me-2">
+                            <i class="fa-solid fa-plane text-primary"></i>
+                          </button>
+                          <div>
+                            <h6 class="m-0 fw-bolder">Flights</h6>
+                            <small class="text-muted">Small description here</small>
+                      
+                          </div>
+                        </a>
+                      </li>
+                      <li class="my-2">
+                        <a class="dropdown-item d-flex" href="#">
+                          <button class="btn btn-secondary me-2">
+                            <i class="fa-solid fa-earth-americas text-primary"></i>
+                          </button>
+                          <div>
+                            <h6 class="m-0 fw-bolder">Tour</h6>
+                            <small class="text-muted">Small description here</small>
+                      
+                          </div>
+                        </a>
+                      </li>
+                      <li class="my-2">
+                        <a class="dropdown-item d-flex" href="#">
+                          <button class="btn btn-secondary me-2">
+                            <i class="fa-solid fa-car text-primary"></i>
+                          </button>
+                          <div>
+                            <h6 class="m-0 fw-bolder">Cab</h6>
+                            <small class="text-muted">Small description here</small>
+                      
+                          </div>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                   
+                  <li class="list-group-item">
+                    <a href="" class="btn  dropdown-toggle d-flex justify-content-between align-items-center border-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                        Listings
+                      
+                    </a>
+                     <ul class="dropdown-menu p-3" style="width: 1060px;">
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Hotels</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Flights</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Tour</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Cabs</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Add Listings</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Hero</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Booking Comfirmed</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Campare Listings</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Offer Detail</a></li>
+                     
+                    </ul>
+                  </li>
+                   <li class="list-group-item">
+                    <a href="" class="btn  dropdown-toggle d-flex justify-content-between align-items-center border-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                        Pages
+                      
+                    </a>
+                     <ul class="dropdown-menu p-3" style="width: 1060px;">
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Hotels</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Flights</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Tour</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Cabs</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Add Listings</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Hero</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Booking Comfirmed</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Campare Listings</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Offer Detail</a></li>
+                     
+                    </ul>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="" class="btn  dropdown-toggle d-flex justify-content-between align-items-center border-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                        Accounts
+                      
+                    </a>
+                     <ul class="dropdown-menu p-3" style="width: 1060px;">
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Hotels</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Flights</a></li>
+                      <li><a class="dropdown-item fw-bolder text-muted " href="#">Tour</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="list-group-item">
+                     <div data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      . . .
+                    </div>
+                    <div class="collapse" id="collapseExample1">
+                      <div class="card">
+                        <div class="card-body">
+                           <ul class="list-group list-group-flush">
+                            <li class="list-group-item list-group-item-action mt-1 border-0 ">
+                              <a href="">
+                                <i class="text-warning fa-fw bi bi-life-preserver me-2"></i>
+                                Support
+                              </a>
+                            </li>
+                            <li class="list-group-item list-group-item-action  ">
+                              <a href="" >
+                                <i class="text-danger fa-fw bi bi-card-text me-2"></i>
+                                Documentation
+                              </a>
+                            </li>
+                            <li class="list-group-item list-group-item-action border-0 mt-1">
+                              <a href="">
+                                <i class="text-info fa-fw bi bi-toggle-off me-2"></i>
+                                RTL demo
+                              </a>
+                            </li>
+                            <li class="list-group-item list-group-item-action">
+                              <a href="">
+                                <i class="text-success fa-fw bi bi-cloud-download-fill me-2"></i>
+                                Buy Booking!
+                              </a>
+                            </li>
+                            <li class="list-group-item list-group-item-action mt-1">
+                              <a href="">
+                                <i class="text-eks fa-fw bi bi-puzzle-fill me-2"></i>
+                                Components
+                              </a>
+                            </li>
+                        </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+          
+        </div>
+      <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero1" >
+            <!-- <img src="./img/pexels-brett-sayles-1059608.jpg" class="rounded-4 w-100 h-100"  alt=""> -->
+            <div class="plane rounded-4 p-2 mt-3" >
+              <h1 class="display-1 fw-bolder text-center mt-5 ">Ready to take off?</h1>
+              <form action="" class="bg-white p-4 m-3 p-lg-5 m-lg-5  box ticket-container ">
+                <div class="container ">
+                  <div class="row ">
+                    <div class="col-12 col-lg-6 d-flex justify-content-start">
+                      <div class="btn-group mb-3 mb-lg-0" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-dark">One way</button>
+                        <button type="button" class="btn btn-secondary">Round Trip</button>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 ">
+                      <div class="row">
+                         <div class="col-12 col-lg-6">
+                    
+                      <select class="form-select mb-3 mb-lg-0   bg-secondary border-0 py-2"  aria-label="Default select example">
+                        <option selected class="small options  bg-white">Select Class</option>
+                        <option value="2" class="options bg-white" >Economy</option>
+                        <option value="3" class="options bg-white">Premium Economy</option>
+                        <option value="3" class="options bg-white">Business</option>
+                        <option value="3" class="options bg-white">First Class</option>
+                      </select>
+                    
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <select class="form-select mb-3 mb-lg-0   bg-secondary border-0 py-2"  aria-label="Default select example">
+                        <option selected class="small options  bg-white">Select Travelers</option>
+                        <option value="2" class="options bg-white" >1</option>
+                        <option value="3" class="options bg-white">2 </option>
+                        <option value="3" class="options bg-white">3</option>
+                        <option value="3" class="options bg-white"> 4</option>
+                      </select>
+                    </div>
+                      </div>
+                    </div>
+                   
+
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-12 col-lg-4">
+                      <div class="card rounded-4 bg-secondary mb-3 mb-lg-0">
+                        <div class="card-body ">
+                          <div class="mb-2 text-muted">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            From
+                          </div>
+                          <select class="form-select     border-0 py-2"  aria-label="Default select example">
+                            <option selected class="small options  bg-white">Select Location</option>
+                            <option value="2" class="options bg-white" >San Jacinto,USA</option>
+                            <option value="3" class="options bg-white">North Dakota, Canada </option>
+                            <option value="3" class="options bg-white">West Virginia, Paris</option>
+                            <!-- <option value="3" class="options bg-white"> 4</option> -->
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <div class="card rounded-4 bg-secondary mb-3 mb-lg-0">
+                        <div class="card-body ">
+                          <div class="mb-2 text-muted">
+                            <i class="bi bi-send me-2"></i>
+                            To
+                          </div>
+                          <select class="form-select     border-0 py-2"  aria-label="Default select example">
+                            <option selected class="small options  bg-white">Select Location</option>
+                            <option value="2" class="options bg-white" >San Jacinto,USA</option>
+                            <option value="3" class="options bg-white">North Dakota, Canada </option>
+                            <option value="3" class="options bg-white">West Virginia, Paris</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <div class="card rounded-4 bg-secondary mb-3 mb-lg-0">
+                        <div class="card-body ">
+                          <div class="mb-2 text-muted">
+                            <i class="bi bi-calendar me-2"></i>
+                            Departure
+                          </div>
+                          <input type="date" name="" id="" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-lg ticket-find ">Find ticket<i class="bi bi-arrow-right ps-3"></i></button>
+
+              </form>
+            </div>
+        </div>
+    </section>
+    <section class="special my-5 ">
+      <div class="container">
+        <h3 class="fw-bold mb-4">Special Offers</h3>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+          <div class="col"> 
+            <div class="card rounded-4 bg-pro   p-2">
+              <img src="./img/07.svg" class="w-50 ms-3 my-3" alt="">
+              <div class="card-body  ">
+                <div class="card-text mb-4">
+                  Flat
+                  <h3 class="fw-bold">$899 off</h3>
+                  <div class="fw-bold">On Domestic Flights</div>
+                  
+                </div>
+                <div class="d-flex justify-content-between ">
+                  <button class="btn btn-secondary btn-lg d-float" style="border: 2px dashed #5143D9;">LOG125F</button>
+                  <div class="arrow"><i class="bi bi-arrow-right"></i></div>
+                </div>
+                </div>
+              </div>
+            </div>
+             <div class="col"> 
+            <div class="card rounded-4 bg-snow   p-2">
+              <img src="./img/08.svg" class="w-50 ms-3 my-3" alt="">
+              <div class="card-body  ">
+                <div class="card-text mb-4">
+                  Flat
+                  <h3 class="fw-bold">13% off</h3>
+                  <div class="fw-bold">On Domestic Flights</div>
+                  
+                </div>
+                <div class="d-flex justify-content-between ">
+                  <button class="btn btn-secondary btn-lg d-float" style="border: 2px dashed #5143D9;">LOG125F</button>
+                  <div class="arrow"><i class="bi bi-arrow-right"></i></div>
+                </div>
+                </div>
+              </div>
+            </div>
+             <div class="col"> 
+            <div class="card rounded-4 bg-pro  p-2">
+              <img src="./img/09.svg" class="w-50 ms-3 my-3" alt="">
+              <div class="card-body  ">
+                <div class="card-text mb-4">
+                  Flat
+                  <h3 class="fw-bold">$2400 off</h3>
+                  <p class="fw-bold ">On International Flights</p>
+                  
+                </div>
+                <div class="d-flex justify-content-between ">
+                  <button class="btn btn-secondary btn-lg d-float" style="border: 2px dashed #5143D9;">LOG125F</button>
+                  <div class="arrow"><i class="bi bi-arrow-right"></i></div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+    <section class="popular ">
+      <div class="container ">
+        <h1 class="fw-bolder display-5 text-center pt-4 mb-3">Popular Destinations</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+          <div class="col">
+            <a href="" class="text-decoration-none  text-dark">
+              <div class="image-container">
+                <img src="./img/01.jpg" class="w-100 rounded-4" alt="">
+                <div class=" circle data-bs-toggle="popover"  data-bs-content="Covid-19 test required Vaccinated travelers can visit"><i class="bi bi-info-circle"></i></div>
+              </div>
+
+              <div class="mt-3 px-2">
+                <div class="d-flex justify-content-between">
+                  <h5 class="fw-bold">Thailand</h5>
+                  <h6 class="fw-bold">4.3<i class="fas fa-star text-warning ms-1"></i></h6>
+                </div>
+                <p class="text-muted">The next flight is on 26th Dec</p>
+              </div>
+            </a>
+          </div>
+           <div class="col">
+            <a href="" class="text-decoration-none  text-dark">
+                <img src="./img/03.jpg" class="w-100 rounded-4" alt="">
+                <div class=" circle" data-bs-toggle="popover"  data-bs-content="Covid-19 test required Vaccinated travelers can visit"><i class="bi bi-info-circle"></i></div>
+              
+              <div class="mt-3 px-2">
+                <div class="d-flex justify-content-between">
+                  <h5 class="fw-bold">Hong Kong</h5>
+                  <h6 class="fw-bold">4.6<i class="fas fa-star text-warning ms-1"></i></h6>
+                </div>
+                <p class="text-muted">Daily 1 flight</p>
+              </div>
+            </a>
+          </div>
+           <div class="col">
+            <a href="" class="text-decoration-none  text-dark">
+              <div class="image-container">
+                <img src="./img/02.jpg" class="w-100 rounded-4" alt="">
+                <div class=" circle" data-bs-toggle="popover"  data-bs-content="Covid-19 test required Vaccinated travelers can visit"><i class="bi bi-info-circle"></i></div>
+              </div>
+
+              <div class="mt-3 px-2">
+                <div class="d-flex justify-content-between">
+                  <h5 class="fw-bold">Maldives</h5>
+                  <h6 class="fw-bold">4.3<i class="fas fa-star text-warning ms-1"></i></h6>
+                </div>
+                <p class="text-muted">2 flights in every week</p>
+              </div>
+            </a>
+          </div>
+           <div class="col">
+            <a href="" class="text-decoration-none  text-dark">
+                <img src="./img/04.jpg" class="w-100 rounded-4" alt="">
+              <div class="mt-3 px-2">
+                <div class="d-flex justify-content-between">
+                  <h5 class="fw-bold">Switzerland</h5>
+                  <h6 class="fw-bold">4.3<i class="fas fa-star text-warning ms-1"></i></h6>
+                </div>
+                <p class="text-muted">Filling fast,next available flight on 2nd Oct</p>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <section class="world mt-5">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col ">
+            
+            <div class="text-center p-3">
+              <img src="./img/step-3.svg" class="w-50" alt="">
+              <h4 class="fw-bolder my-2">Search Choice</h4>
+              <p class="text-muted">Total 630+ destinations that we work with</p>
+            </div>
+          </div>
+           <div class="col my-5">
+            <div class="text-center p-3">
+              <img src="./img/step-2.svg" class="w-50" alt="">
+              <h4 class="fw-bolder my-2">Select Destination</h4>
+              <p class="text-muted">Insipidity the sufficient discretion imprudence</p>
+            </div>
+          </div>
+           <div class="col">
+            <div class="text-center p-3">
+              <img src="./img/step-1.svg" class="w-50" alt="">
+              <h4 class="fw-bolder my-2">Easy to Book</h4>
+              <p class="text-muted">With an easy and fast ticket purchase process</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <section class="discover">
+      <div class="container bg-light py-5 ps-5 rounded-4">
+        <div class="row  d-flex align-items-center">
+          <div class="col-12 col-lg-9 ">
+            <h1 class="fw-bolder">It's time to discover <img src="./img/04.svg" style="width: 45px;" alt=""></h2>
+              <p class="text-muted">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy.</p>
+          </div>
+          <div class="col-12 col-lg-3">
+            <button class="btn btn-dark btn-lg rounded-4 fw-bold ">Book a Flight</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="blog mt-5">
+      <div class="container">
+        <h1 class="display-5 fw-bolder text-center mb-3">Latest Blogs & News</h1>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-5 mb-lg-0">
+            <img src="./img/01 (1).jpg" class="w-100 rounded-4 mb-3" alt="">
+            <a href="" class="h3 fw-bolder text-decoration-none text-dark ">10 Ways on How to Improve your Hotel Operation</a>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="row d-flex align-items-center">
+              <div class="col-12 col-sm-4">
+                 <a href="">
+                  <img src="./img/02 (1).jpg" class="w-100 rounded-4" alt="">
+                 </a>
+              </div>
+              <div class="col-12 col-sm-8">
+                
+                  <a href="" class="text-decoration-none  text-dark">
+                    <h5 class="fw-bold" >Story of water world adventure</h5>
+                    <p class="text-muted fs-6">Jacqueline Miller</p>
+                  </a>
+               
+              </div>
+            </div>
+            <div class="row d-flex align-items-center my-5">
+              <div class="col-12 col-sm-4">
+                 <a href="">
+                  <img src="./img/03 (1).jpg" class="w-100 rounded-4" alt="">
+                 </a>
+              </div>
+              <div class="col-12 col-sm-8">
+                
+                  <a href="" class="text-decoration-none  text-dark">
+                    <h5 class="fw-bold" >How Hotel Technology Can Help Small Hotel Business</h5>
+                    <p class="text-muted fs-6">Frances Guerrero</p>
+                  </a>
+               
+              </div>
+            </div>
+            <div class="row d-flex align-items-center">
+              <div class="col-12 col-sm-4">
+                 <a href="">
+                  <img src="./img/04 (1).jpg" class="w-100 rounded-4" alt="">
+                 </a>
+              </div>
+              <div class="col-12 col-sm-8">
+                
+                  <a href="" class="text-decoration-none  text-dark">
+                    <h5 class="fw-bold" >Hotel Service - Become a Guide for Your Guests</h5>
+                    <p class="text-muted fs-6">Louis Ferguson</p>
+                  </a>
+               
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <footer class="footer mt-5">
+      <div class="container bg-dark p-5  rounded-4 ">
+        <div class="row d-flex align-items-center ">
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+            <div class="d-flex justify-content-evenly justify-content-lg-between">
+              <a href="" class="text-decoration-none text-footer">About</a>
+              <a href="" class="text-decoration-none text-footer">Policy</a>
+              <a href="" class="text-decoration-none text-footer">Terms & Condition</a>
+              
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 mb-4 mb-lg-0 p-4">
+            <div class="text-center">
+              <a href=""><img src="./img/logo-light.svg" style="width: 200px;" alt=""></a>
+              <p class="text-footer m-0 mt-3">Copyrights ©2022 Booking.All rights reserved.</p>
+             
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="d-flex gap-4 justify-content-center">
+              <a href="" class="text-decoration-none text-footer"><i class="fab fa-facebook-f fs-5"></i></a>
+              <a href="" class="text-decoration-none text-footer"><i class="fab fa-twitter fs-5"></i></a>
+              <a href="" class="text-decoration-none text-footer"><i class="fab fa-instagram fs-5"></i></a>
+              <a href="" class="text-decoration-none text-footer"><i class="fab fa-linkedin fs-5"></i></a>
+              <a href="" class="text-decoration-none text-footer"><i class="fab fa-github fs-5"></i></a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </main>
+    <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>
